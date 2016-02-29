@@ -8,7 +8,8 @@
         width: 250px;
         float: left;
         img{
-            height: 100%;
+            max-width: 250px;
+            width: 100%;
             margin: 1em;
             padding: 1em;
         }
@@ -18,4 +19,17 @@
             background: #2f2d2d;
         }
     }
+}
+#banner{
+    display: block;
+    width: 800px;
+}
+#productos{
+    display: none;
+}
+header{
+    display: none;
+}
+#encabezado{
+    display: none;
 }
