@@ -3,12 +3,13 @@
   display: inline-block; }
   #listado_productos li {
     width: 250px;
-    float: left; }
+    float: left;
+    padding: 0.5em; }
     #listado_productos li img {
       max-width: 250px;
       width: 100%;
-      margin: 1em;
-      padding: 1em; }
+      margin: 0em;
+      padding: 0em; }
     #listado_productos li img:hover {
       filter: alpha(opacity=100) 3000;
       opacity: 0.5;
@@ -22,14 +23,13 @@
   width: 100%;
   margin: 0 auto; }
   #productos p {
-    background: red; }
-
-/*
-header{
-    display: none;
-}
-#encabezado{
-    display: none;
-}*/
+    background: red;
+    height: 2.5em;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 12pt;
+    vertical-align: middle;
+    border: 10px solid red; }
 
 /*# sourceMappingURL=productos.css.map */
