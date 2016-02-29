@@ -22,14 +22,16 @@
 }
 #banner{
     display: block;
-    width: 800px;
 }
 #productos{
-    display: none;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
 }
+/*
 header{
     display: none;
 }
 #encabezado{
     display: none;
-}
+}*/

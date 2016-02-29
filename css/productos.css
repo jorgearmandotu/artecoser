@@ -15,16 +15,19 @@
       background: #2f2d2d; }
 
 #banner {
-  display: block;
-  width: 800px; }
+  display: block; }
 
 #productos {
-  display: none; }
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto; }
 
-header {
-  display: none; }
-
-#encabezado {
-  display: none; }
+/*
+header{
+    display: none;
+}
+#encabezado{
+    display: none;
+}*/
 
 /*# sourceMappingURL=productos.css.map */
