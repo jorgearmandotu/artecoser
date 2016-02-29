@@ -1,0 +1,28 @@
+#contenido{
+    
+}
+#hilos{
+    min-height: 300px;
+    max-width: 630px;
+    margin: 0 auto;
+}
+#descripcion{
+    margin: 10px auto;
+    max-width: 800px;
+    
+}
+.imghilos{
+    position: relative;
+    left: 21%;
+    right: 40%;
+}
+#gal1{
+    max-width: 630px;
+    
+}
+#gal1 img{
+    border:2px solid red;
+}
+.active img{border:2px solid #333 !important;
+}
+

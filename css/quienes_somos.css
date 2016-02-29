@@ -1,0 +1,30 @@
+#nosotros{
+    
+    background-repeat: no-repeat;
+    background-position: top;
+/*    background-size: 300px;*/
+    background-attachment: fixed;
+}
+
+#texto{
+    padding: 0;
+    margin 0;
+    font-size: 12pt;
+    background-color: #fff;
+	width:95%;
+	margin:20px auto;
+    position: relative;
+}
+
+#texto p{
+    margin: 1em;
+}
+h1+img+p , h2+p, p+p{
+    text-indent: 50px;
+}
+h1+img{
+    float: left;
+    max-width: 500px;
+    padding: 2em;
+    margin: 2em;
+}

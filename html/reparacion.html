@@ -1,0 +1,138 @@
+
+
+ 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	 <meta charset="utf-8">
+    <meta name="language" content="ES">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<meta name="description" content="sitio oficial Arte Coser, paguína principal, empresa nariñense, empresa pastusa, maquinas de coser,hilos,maquinas pasto"/>
+	<meta name="keywords" content="maquinas de coser pasto,hilos pasto, reparacion maquinas de coser pasto,empresa pastusa"/>
+	<meta name="author" content="Reon-Soluciones_Web"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>maquinas de coser Milenio</title>
+   <link rel="stylesheet" href="../css/normailze.min.css">
+    <link rel="stylesheet" href="../estilos.css">
+	<link rel="stylesheet" href="../fonts.css">
+	<link rel="stylesheet" href="../css/brother.css">
+    <link rel="stylesheet" href="../css/mapa.css">
+<!--	<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+	
+</head>
+    <body>
+    <div id="encabezado">
+        
+        <img src="../imagenes/iconos-artecoser.gif" width="200" height="100">
+    
+    </div>
+    <header>
+        <hr>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="icon-menu"></span></a>
+		</div>
+ 
+		<nav>
+			<ul>
+				<li><a href="../index.html"><span class="icon-home3"></span>Inicio</a></li>
+				<li><a href="quienes_somos.html"><span class="icon-user"></span>Quienes Somos</a></li>
+				<li class="submenu">
+					<a href="#"><span class="icon-cart"></span>Productos <span class="icon-circle-down"></span></a>
+					<ul class="children">
+						<li><a href="maquinas.html">Maquinas de coser <span class=""></span></a></li>
+						<li><a href="hilos.html">Hilos <span class=""></span></a></li>
+						<li><a href="reparacion.html">Reparacion y mantenimiento<span class=""></span></a></li>
+					</ul>
+				</li>
+				<li><a href="contactos.html"><span class="icon-bubbles3"></span>Contacto</a></li>
+			</ul>
+		</nav>
+        </header>
+        <div id="reseña">
+            Si necesita servicio de reparacion el siguente mapa le indicara su pocicion y el camino a seguir para llegar a nuestra sede aunque tambien contamos con el servicio a domicilio,para el cual puede llamar a nuestros numeros de contactos o dejarnos un mensaje en nuestra seccion de contactos.
+        </div>
+        <div id="mapa">
+         
+<div id='ubicacion'></div>
+<script type="text/javascript">
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(mostrarUbicacion);
+	} else {alert("¡Error! Este navegador no soporta la Geolocalización.");}
+function mostrarUbicacion(position) {
+    var timaes a= position.timestamp;
+	var latitud = position.coords.latitude;
+	var longitud = position.coords.longitude;
+    var altitud = position.coords.altitude;	
+	var exactitud = position.coords.accuracy;	
+	var div = document.getElementById("ubicacion");
+	div.innerHTML = "Timestamp: " + times + "<br>Latitud: " + latitud + "<br>Longitud: " + longitud + "<br>Altura en metros: " + altitud + "<br>Exactitud: " + exactitud;}	
+function refrescarUbicacion() {	
+	navigator.geolocation.watchPosition(mostrarUbicacion);}	
+</script>
+
+<div id="demo"></div>
+<div id="mapholder"></div>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<button onclick="cargarmap()">Mostrar mi ubicacion</button>
+<script type="text/javascript">
+var x=document.getElementById("demo");
+function cargarmap(){
+navigator.geolocation.getCurrentPosition(showPosition,showError);
+function showPosition(position)
+  {
+  lat=position.coords.latitude;
+  lon=position.coords.longitude;
+  latlon=new google.maps.LatLng(lat, lon)
+  mapholder=document.getElementById('mapholder')
+  mapholder.style.height='250px';
+  mapholder.style.width='500px';
+  var myOptions={
+  center:latlon,zoom:15,
+  mapTypeId:google.maps.MapTypeId.ROADMAP,
+  mapTypeControl:false,
+  navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+  };
+  var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+  var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"}); 
+  var companyLogo = new google.maps.MarkerImage('../imagenes/mapa/png.png', new google.maps.Size(100,50), new google.maps.Point(0,0), new google.maps.Point(50,50) ); var companyShadow = new google.maps.MarkerImage('../imagenes/mapa/png.png', new google.maps.Size(130,50), new google.maps.Point(0,0), new google.maps.Point(65, 50) ); var companyPos = new google.maps.LatLng(1.211756, -77.280653); var companyMarker = new google.maps.Marker({ position: companyPos, map: map, icon: companyLogo, shadow: companyShadow, title:"Company Title" });
+  }
+  
+
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      x.innerHTML="Denegada la peticion de Geolocalización en el navegador."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML="La información de la localización no esta disponible."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML="El tiempo de petición ha expirado."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML="Ha ocurrido un error desconocido."
+      break;
+    }
+  }}
+</script>
+        </div>
+         </div>
+    <div id="figura">
+    <img src="../imagenes/mapa/personaje.png" width="500px" height="350px">
+    </div>
+         <div id="pie">
+        <p>Calle 15 No.22B-15 Via san Andresito-Pasto<br>
+             Tel:7298272 Cel:317 776 1315-315 780 6089<br>
+             Email:artecoser78@hotmail.es<br></p>
+             <br>
+        </div> 
+</body>
+<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="../main.js"></script> 
+<script src="../js/jquery.elevatezoom.js"></script> 
+<script src="../js/productos-zoom.js"></script> 
+</html>

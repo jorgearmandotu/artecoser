@@ -1,0 +1,21 @@
+#listado_productos{
+    list-style: none;
+    display: inline-block;
+    ul{
+        
+    }
+    li{
+        width: 250px;
+        float: left;
+        img{
+            height: 100%;
+            margin: 1em;
+            padding: 1em;
+        }
+        img:hover{
+            filter:alpha(opacity=100)3000;
+            opacity: 0.5;
+            background: #2f2d2d;
+        }
+    }
+}

@@ -1,0 +1,193 @@
+/*remover focus*/
+/**:focus {
+    outline: none;
+}
+*/
+/*tipografias*/
+.formulario{
+    margin: 0;
+    padding: 0;
+}
+legend{
+    font-weight: bold;color: #61380b;
+    font-size: 1.5em;
+}
+.formulario h2, .formulario label{
+    padding: 2em;
+}
+
+.notificacion, .formatocorrecto{
+    font-size: 11px;
+}
+
+.formulario ul{
+    width: 90%;
+    list-style-type: none;
+    list-style-position: outside;
+}
+.formulario li{
+    padding: .2em;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    margin: .4em 0;:
+}
+
+
+.notificacion{
+    color: #d45252;
+    margin: 5px 0 0 0;
+    display: inline;
+    float: right;
+}
+
+
+/*==from Elements==*/
+.formulario label{
+    width: 80px;
+    margin-top: 3px;
+    display: inline-block;
+    float: left;
+    padding: 3px;
+}
+
+.formulario input{
+    height: 30px;
+    width: 50%;
+    min-width: 150px;
+    padding: 5px 8px;
+}
+
+.formulario textarea{
+    padding 8px;
+    width: 50%;
+    min-width: 200px;
+    
+}
+
+.formulario button{
+    align-items: center;
+    position: relative;
+    margin-left:  10%;
+    margin-top: 10px;
+    font-size: 10pt;
+}
+
+/* stios visuales de elñementos*/
+.formulario input, .formulario textarea{
+    border: 1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px #eee inset;
+    border-radius: 3px;
+    padding-right: 30px;
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+    -o-transition: padding .25s;
+    transition: padding .25s;
+}
+
+.formulario input:focus, .formulario textarea:focus{
+    background: #fff;
+    border: 1px solid #555;
+    box-shadow:  0 0 3px #aaa;
+    padding-right: 10px;
+}
+
+/*=====validaciones===*/
+.formulario input:required, .formulario textarea:required{
+    background: #fff url(../imagenes/validomin.png) no-repeat 99% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+.formulario input:focus:invalid, .formulario textarea:focus:invalid{
+    background: #fff url(../imagenes/alertamin.png) no-repeat 99% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535:
+}
+/*cuando formatocorrecto */
+
+.formatocorrecto{
+    background: #d45252;
+    border-radius: 3px 3px 3px 3px;
+    color: white;
+    margin-left: 8px;
+    padding: 1px 6px;
+    z-index: 999;
+    position: absolute;
+    display: none;
+}
+
+.formatocorrecto::before{
+    content: "\25C0";/*formato unicode u+25C0   triangulo hacia izquierda*/
+    color: #d45252;
+    position: absolute;
+    top: 1px;
+    left: -6px;
+}
+
+.formulario input:focus + .formatocorrecto{
+    display: inline;
+}
+
+.formulario input:required:valid + .formatocorrecto{
+    background: #28921f;
+}
+.formulario input:required:valid + .formatocorrecto::before{
+    color: #28921f;
+}
+
+/*estilo de botton*/
+button.submit{
+    background-color: #68b12f;
+    background: -webkit-gradient(linear, left top, left bottom, from (#68b12f), to(#50911e));
+    background: -moz-gradient(linear, left top, left bottom, from (#68b12f), to(#50911e));
+    background: -o-gradient(linear, left top, left bottom, from (#68b12f), to(#50911e));
+    background: gradient(linear, left top, left bottom, from (#68b12f), to(#50911e));
+    
+    background: -webkit-linear-gradient(top, #68b12f, #50911e);
+    background: -moz-linear-gradient(top, #68b12f, #50911e);
+    background: -ms-linear-gradient(top, #68b12f, #50911e);
+    background: -o-linear-gradient(top, #68b12f, #50911e);
+    background: linear-gradient(top, #68b12f, #50911e);
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+    color: white;
+    font-weight: bold;
+    padding: 6px 2px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+
+button.submit:active{
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset;
+    -webkit-box-shadow: 0 0 10px 5px #356b0b inset;
+    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+    -o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
+
+@media only screen and (max-width: 500px) {
+    .formulario button{
+        margin-left: 5%
+    }
+    .formatocorrecto{
+        position: relative;
+    }
+    .formulario input:focus + .formatocorrecto{
+        display: inline-block;
+    }
+}
+.requeridos {
+    color: #d45252;
+    
+}

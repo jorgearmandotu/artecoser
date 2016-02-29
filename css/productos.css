@@ -1,0 +1,43 @@
+#listado_productos {
+  list-style: none;
+  display:table;
+  max-width: 1200px;
+  width: 95%;
+  margin: 20px auto;
+  }
+
+  #listado_productos li {
+    margin: 1em;
+    width: 15%;
+    min-width: 200px;
+    overflow:auto;
+    float:left
+     }
+
+    #listado_productos li img {
+      
+      border: 5px solid #ccc;
+      width: 100%;
+      margin-left:0em;
+     
+      
+      }
+
+    #listado_productos li img:hover {
+      filter: alpha(opacity=500) 1000;
+      opacity: 0.6; 
+     
+      
+      }
+
+    #listado_productos li p {
+     text-align:center;     
+     margin-top:-3%;
+     padding: 5%;
+     background: rgb(255, 3, 19);
+     color: white;   }
+
+
+ 
+      
+/*# sourceMappingURL=productos.css.map */
