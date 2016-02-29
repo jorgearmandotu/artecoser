@@ -7,10 +7,12 @@
     li{
         width: 250px;
         float: left;
+        padding: 0.5em;
         img{
-            height: 100%;
-            margin: 1em;
-            padding: 1em;
+            max-width: 250px;
+            width: 100%;
+            margin: 0em;
+            padding: 0em;
         }
         img:hover{
             filter:alpha(opacity=100)3000;
@@ -18,4 +20,23 @@
             background: #2f2d2d;
         }
     }
+}
+#banner{
+    display: block;
+}
+#productos{
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    p{
+        background: red;
+        height: 2.5em;
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+        font-size: 12pt;
+        vertical-align: middle;
+        border: 10px solid red;
+    }
+
 }

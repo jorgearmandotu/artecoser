@@ -24,7 +24,8 @@ h1+img+p , h2+p, p+p{
 }
 h1+img{
     float: left;
-    max-width: 500px;
-    padding: 2em;
-    margin: 2em;
+    max-width: 400px;
+    width: 100%;
+    padding: 1em;
+    margin: 0em;
 }

@@ -1,3 +1,4 @@
+
 #productos{
     min-height: 300px;
     margin: 0 auto;
@@ -17,6 +18,12 @@
     float: left;
     position: relative;
 }
+#gal1 a,#gal2 a,#gal3 a,#gal4 a,#gal5 a{
+    
+}
+section{
+    
+}
 #gal1 img,#gal2 img,#gal3 img,#gal4 img,#gal5 img{
     position: relative;
     left: 10px;
@@ -30,4 +37,22 @@
     position: relative;
     max-width: 30px;
     right: -800px;
+}
+@media only screen and (max-width : 500px){
+    .imgproducto{
+        display: none;
+        height: 10px;
+    }
+    .active img{
+        border: 0px !important;
+        background: none;
+    }
+    #img_01,#img_02,#img_03,#img_04,#img_05{
+        max-width: 100%;
+        padding: 10px !important;
+    }
+    #gal1 a,#gal2 a,#gal3 a,#gal4 a,#gal5 a{
+        pointer-events: none;
+        cursor: default;
+    }
 }
