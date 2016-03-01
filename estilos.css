@@ -22,8 +22,8 @@ body {background:white;}
     
 }
 #contenido{
-    width:95%;
     max-width: 1300px;
+    width: 100%;
     margin: 0 auto;
     background-color: #fff;
 }
