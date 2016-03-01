@@ -114,6 +114,20 @@ header nav ul li .caret {
 	margin-left:10px;
 	margin-right:0px;
 }
+
+#informacion{
+        max-width: 500px;
+    width: 100%;
+        margin: 0 auto;
+}
+#informacion h1, h2, h3{
+        text-align: center;
+    align-content: center;
+}
+#informacion h1{
+    padding: 0;
+    margin: 0;
+}
  
 @media screen and (max-width: 800px) {
 	body {
@@ -194,5 +208,19 @@ header nav ul li .caret {
 	header nav ul li .caret {
 		float: right;
     }
-
-  
+    #bannerpequeno{
+        margin: 0 auto;
+        text-align: center;
+        align-content: center;
+    }
+    #informacion h1{
+        font-size: 2em;
+    }
+    #informacion h2{
+        font-size: 1.3em;
+    }
+    #informacion h3{
+        font-size: 1em;
+    }
+    
+}
