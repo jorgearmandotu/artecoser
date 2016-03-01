@@ -21,10 +21,15 @@
     width: 100%;
     
 }
-#ubicacionartecoser iframe{
+#ubicacionartecoser iframe, #mapaartecoser iframe{
     max-width: 500px;
     width: 100%;
-    
+   padding: 10px;
+    margin: 0 auto;
+}
+#ubicacionartecoser{
+    max-width: 500px;
+    margin: 0 auto
 }
 @media only screen and (max-width: 1050px) {
     #figura img{
@@ -41,6 +46,16 @@
     #figura img{
         max-width: 200px;
         width: 100%;
-        display: ;
+    }
+}
+@media only screen and (max-width: 700px){
+    #figura img{
+        display: none;
+    }
+    #mapaartecoser iframe{
+        max-width: 100%;
+    }
+    #ubicacionartecoser iframe{
+        max-width: 100%;
     }
 }
