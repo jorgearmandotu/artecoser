@@ -121,7 +121,7 @@ header nav ul li .caret {
     width: 100%;
         margin: 0 auto;
 }
-#informacion h1,informacion h2,informacion h3{
+#informacion h1,#informacion h2,#informacion h3{
         text-align: center;
     align-content: center;
 }
