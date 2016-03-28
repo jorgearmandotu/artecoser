@@ -176,6 +176,29 @@ button.submit:active{
     -o-box-shadow: 0 0 10px 5px #356b0b inset;
 }
 
+#enviando{
+    position: absolute;
+    z-index: 999;
+    background-color: #dd601e;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    float: left;
+    margin: 2px solid red;
+    display: none;
+}
+#enviando img{
+    
+    max-width: 100%;
+    width: 90px;
+    height: 90px;
+}
+#enviando span{
+    float: center;
+}
+.envio{
+    display: inherit !important;
+}
 @media only screen and (max-width: 500px) {
     .formulario button{
         margin-left: 5%
