@@ -1,4 +1,13 @@
 <?php
+
+    function died($error){
+        echo "Lo sentimos, hubo un error en sus datos el mensaje no pudo ser enviado en este momento. ";
+        
+        echo "Detalle de Error.<br /><br />";
+        echo $error."<br><br>";
+        echo "Corrija estos errores e intentelo de nuevo.<br><br>";
+        die();
+    }
     function form_mail($sPara, $sAsunto, $sTexto, $sDe)
     {
         $bHayFicheros = 0;

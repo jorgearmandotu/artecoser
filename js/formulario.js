@@ -8,6 +8,8 @@ $(document).ready(function() {
     });
     
 })
+
+/*
 $('#formulario').submit(function() {
     var formData = new FormData($(this)[0]);
         $.ajax({
@@ -26,7 +28,8 @@ $('#formulario').submit(function() {
 
         return false;
     }); 
-/*////////////////////////////////////////////
+*/
+/*////////////////////////////////////////////*/
 $('#formulario').submit(function(event) {
         event.preventDefault();
         var formData = new FormData($(this)[0]);
@@ -44,4 +47,4 @@ $('#formulario').submit(function(event) {
         })
         return false;
 
-    });*/
+    });
