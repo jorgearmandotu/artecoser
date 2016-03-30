@@ -6,6 +6,35 @@ $(document).ready(function() {
         $('#loading').hide();
         $('#result').fadeIn('slow');
     });
+    $('#formulario').submit(function() {
+        $.ajax({
+            type: 'POST',
+            url: '../html/formularioConAdjuntos2.php',
+            data: $(this).serialize(),
+            success: function(data) {
+                $('#formulario')[0].reset();
+                $('#result').html(data);
+            }
+        })
+        
+        return false;
+    }); 
+})  
+
+
+
+
+
+
+
+/*$(document).ready(function() {
+    $().ajaxStart(function() {
+        $('#loading').show();
+        $('#result').hide();
+    }).ajaxStop(function() {
+        $('#loading').hide();
+        $('#result').fadeIn('slow');
+    });
     
 })
 
@@ -30,7 +59,7 @@ $('#formulario').submit(function() {
     }); 
 */
 /*////////////////////////////////////////////*/
-$('#formulario').submit(function(event) {
+/*$('#formulario').submit(function(event) {
         event.preventDefault();
         var formData = new FormData($(this)[0]);
         $.ajax({
@@ -47,4 +76,4 @@ $('#formulario').submit(function(event) {
         })
         return false;
 
-    });
+    });*/

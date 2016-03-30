@@ -52,7 +52,7 @@
 		</nav>
         </header>
         <div id="contenido">
-            <form class="formulario" action="formularioConAdjuntos2.php" id="formulario" method="post" enctype="multipart/form-data" name="formulario" runat="server" accept-charset="utf_8"> 
+            <form class="formulario" action="formulario.php" id="formulario" method="post" name="formulario" runat="server"> 
            <fieldset>
                <legend><strong>Contactos:</strong></legend>
             <div> 
@@ -60,28 +60,16 @@
                 <ul>
                     <li> 
                     <label for="nombre">Nombre:<span class="requeridos">*</span></label> 
-                        <input type="text" name="nombre" placeholder="Ivan Narvaez" required maxlength="50" /> </li>
+                        <input type="text" name="nombre" placeholder="Ivan Narvaez" required /> </li>
                     <li>
-                    <label for="email">Email:<span class="requeridos" >*</span></label> 
-                    <input type="email" name="email" placeholder="ejemplo@micorreo.com" required maxlength="50" /> 
+                    <label for="email">Email:<span class="requeridos">*</span></label> 
+                    <input type="email" name="email" placeholder="ejemplo@micorreo.com" required /> 
                         <span class="formatocorrecto">Formato correcto: "name@something.com"</span> </li>
                    <li> 
                     <label for="mensaje">Mensaje:<span class="requeridos">*</span></label> 
                        <textarea name="mensaje" cols="30" rows="6" required></textarea> </li>
-                       
                     <li>
-                        <p>Sí eres empresa y deseas una cotización no olvides adjuntar una copia del Rut y certificado de cámara de comercio</p>
-                    </li>
-                    <li>
-                      <div id="enviando"><span>enviando espere... </span><img src="../imagenes/estilo/cargando_small.gif"></div>
-                       <span>Rut: </span>
-                        <input type= "file" name="Rut">
-                    </li>
-                    <li>
-                        <span>Cámara de comercio: </span><input type="file" name="camara">
-                    </li>
-                    <li>
-                        
+                    
                     <button class="submit" type="submit" name="submit" onclick="submit">Enviar mensaje</button> 
                     <button class="submit" type="reset">Borrar Todo</button>
                     </li>

@@ -1,15 +1,20 @@
 <?php
+    function died($error){
+        echo "<p style = 'background-color: #4C8CCA'>Lo sentimos, hubo un error en sus datos el mensaje no pudo ser enviado en este momento <br>Detalle de Error <br>".$error." <br>Corrija estos errores e intentelo de nuevo)</p>";
+        die();
+    }
 
-    function died($error){
-        echo "Lo sentimos, hubo un error en sus datos el mensaje no pudo ser enviado en este momento. ";
-        
-        echo "Detalle de Error.<br /><br />";
-        echo $error."<br><br>";
-        echo "Corrija estos errores e intentelo de nuevo.<br><br>";
-        die();
-    }
+     function clean_string($string){
+        $bad = array("content-type","bcc:","to:","cc:","href");
+        return str_replace($bad,"",$string);
+        }
+    
     function form_mail($sPara, $sAsunto, $sTexto, $sDe)
     {
+        
+        
+        
+        
         $bHayFicheros = 0;
         $scabeceraTexto = "";
         $sAdjuntos = "";
@@ -18,7 +23,7 @@
         
         $sCabeceras = "MIME-version: 1.0\n";
         
-        
+    
         //recojemos campos de texto
         $nombre = strip_tags($_POST['nombre']);
         $email  = strip_tags($_POST['email']);
@@ -42,10 +47,7 @@
             died($error_message);
         }
         
-        function clean_string($string){
-        $bad = array("content-type","bcc:","to:","cc:","href");
-        return str_replace($bad,"",$string);
-        }
+       
     
         
         
@@ -68,7 +70,10 @@
                 
             }
             
-            //se añade el fichero
+           //se valida el tamaño del archivo
+            if($vAdjunto["size"]>1090000) 
+                died("El tamaño de archivo es muy grande");
+             //se añade el fichero
             if($vAdjunto["size"]>0)
             {
                 $sAdjuntos .= "\n\n--".$sSeparador."\n";
@@ -98,13 +103,17 @@
             $sCuerpo .= $sAdjuntos."\n\n--".$sSeparador."--\n";
         }
         // se añade la cabecera de destinatario
-    if ($sDe)$sCabeceras .= "From: ".$sDe."\n";
+        
+    if ($sDe){$sCabeceras .= "From: ".$sDe."\n";
+            
+             }
         //envio de email
-    return(mail($sPara, $sAsunto, $sCuerpo, $sCabeceras));
+        return(mail($sPara, $sAsunto, $sCuerpo, $sCabeceras));
+        echo "'\n\nnviado";
         
     }
     
-    if (form_mail("jorgearmandou@gmail.com","Paguina ArteCoser","",strip_tags($_POST["email"]))){
+    if (form_mail("artecoser78@hotmail.com","Paguina ArteCoser",$sDe,strip_tags($_POST["email"]))){
         echo ' <script type="text/javascript">alert("Gracias por usar nuestros servicios nos contactaremos con tigo lo mas pronto posible")</script>';
     }else{
         '<script type="text/javascript">alert("hubo un error inesperado intentalo mas tarde")</srcipt>';

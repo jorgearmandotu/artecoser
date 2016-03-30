@@ -2,12 +2,14 @@
 if(isset($_POST['email'])) {
     $email_to = "jorgearmandou@gmail.com";
     $email_subject = "mensajes de páguina artecoser";
+    
+    
     function died($error){
-        echo "Lo sentimos, hubo un error en sus datos el mensaje no pudo ser enviado en este momento. ";
+        echo "<p style=background-color: blue>Lo sentimos, hubo un error en sus datos el mensaje no pudo ser enviado en este momento. /n";
         
         echo "Detalle de Error.<br /><br />";
         echo $error."<br><br>";
-        echo "Corrija estos errores e intentelo de nuevo.<br><br>";
+        echo "Corrija estos errores e intentelo de nuevo.<br><br></p>";
         die();
     }
     //se valida q los campos del formulario esn llenos
@@ -57,6 +59,7 @@ if(isset($_POST['email'])) {
         'Reply-To: '.$email."\r\n" .
         'X-Mailer: PHP/' . phpversion();
     @mail($email_to, $email_subject, $email_mensaje, $headers);
+        
     ?>
 <!--    mensaje de salida-->
    <script type="text/javascript">alert('Gracias por usar nuestros servicios nos contactaremos con tigo lo mas pronto posible')</script>
